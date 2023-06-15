@@ -24,7 +24,7 @@
     Shades: #cf711f
     Accents:
     Greys: #555, #333
-    font: #333, #fff, #ced4da
+    font: #333, #fff, #ced4da, #888
 
 --- Shadows---
 
@@ -51,6 +51,14 @@ body {
     line-height: 1;
     font-weight: 400;
     color: #555;
+}
+
+ul {
+    list-style: none;
+}
+
+strong {
+    font-weight: 500;
 }
 
 /* ************************ */
@@ -102,7 +110,7 @@ body {
 .heading-tertiary {
     font-size: 3rem;
     line-height: 1.2;
-    margin-bottom: 3.2rem;
+    margin-bottom: 2.4rem;
 }
 
 .subheading {
@@ -124,7 +132,7 @@ body {
     border-radius: 1rem;
     font-weight: 500;
 
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
 .btn--cta:link, .btn--cta:visited {
@@ -145,6 +153,28 @@ body {
     box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link, .link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #e67e22;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 0.4rem;
+    transition: all 0.3s;
+}
+
+.link:hover, .link:active {
+    color: #cf711f;
+    border-bottom: 1px solid transparent;
+}
+
 .margin-right-sm {
     margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+    margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+    text-align: center;
 }

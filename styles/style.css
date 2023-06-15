@@ -1,5 +1,3 @@
-
-
 /* ************************ */
 /* HEADER */
 /* ************************ */
@@ -21,7 +19,6 @@
 /* NAV */
 /* ************************ */
 .main-nav-list {
-    list-style: none;
     display: flex;
     align-items: center;
     gap: 3.2rem;
@@ -113,10 +110,39 @@
 }
 
 /* ************************ */
+/* FEATURED IN SECTION */
+/* ************************ */
+.section-featured {
+    padding: 4.8rem 0;
+}
+
+.heading-featured-in {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color: #888;
+}
+
+.logos {
+    display: flex;
+    /* gap: 3.2rem; */
+    justify-content: space-around;
+}
+
+.logos img {
+    height: 3.2rem;
+    filter: brightness(0);
+    opacity: 0.5;
+}
+
+/* ************************ */
 /* HOW IT WORKS SECTION */
 /* ************************ */
 .section-how {
-    padding: 8rem 0;
+    padding: 4.8rem 0;
 }
 
 .step-number {
@@ -141,19 +167,30 @@
 }
 
 .step-img-box::before {
-    width: 60%;
+    width: 50%;
     /* when height doesn't work */
-    padding-bottom: 60%;
+    padding-bottom: 50%;
     background-color: #fdf2e9;
     z-index: -2;
-    
+    transition: all 0.4s;
+}
+
+.step-img-box:hover::before {
+    width: 60%;
+    padding-bottom: 60%;
 }
 
 .step-img-box::after {
-    width: 45%;
-    padding-bottom: 45%;
+    width: 40%;
+    padding-bottom: 40%;
     background-color: #fae5d3;
     z-index: -1;
+    transition: all 0.4s;
+}
+
+.step-img-box:hover::after {
+    width: 50%;
+    padding-bottom: 50%;
 }
 
 .step-img {
@@ -163,4 +200,115 @@
 .step-description {
     font-size: 1.8rem;
     line-height: 1.6;
+}
+
+/* ************************ */
+/* MEALS SECTION */
+/* ************************ */
+.section-meals {
+    padding: 4.8rem 0;
+}
+
+.meal {
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
+    border-radius: 13px;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+.meal:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-content {
+    padding: 3.6rem;
+    padding-top: 1.6rem;
+}
+
+.meal-tags {
+    margin-bottom: 1.2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    
+    color: #333;
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+.tag--veg {
+    background-color: #51cf66;
+}
+.tag--vegan {
+    background-color: #94d82d;
+}
+.tag--paleo {
+    background-color: #fcc419;
+}
+
+.meal-img {
+    width: 100%;
+    transition: all 0.4s;
+}
+
+.meal-img:hover {
+    transform: scale(1.05);
+    width: 100%;
+}
+
+.meal-title {
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+}
+
+.meal-attributes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.meal-icon {
+    font-size: 2.4rem;
+    color: #e67e22;
+}
+
+.meal-attribute {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.diet-list-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #e67e22;
+}
+
+.diet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.diet-list-item {
+    font-size: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.all-recipes {
+    font-size: 1.8rem;
+    text-align: center;
 }
