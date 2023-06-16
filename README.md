@@ -21,7 +21,7 @@ This is the repository for the landing page of Omnifood, an AI-based food recomm
 To get a local copy of the Omnifood landing page up and running on your machine, you don't need to install anything. Simply clone the repository and open the `index.html` file in your preferred web browser.
 
 ```bash
-git clone https://github.com/your-username/omnifood-landing-page.git
+git clone https://github.com/aditya-2010/omnifood.git
 ```
 
 ## Features
