@@ -152,6 +152,10 @@
     font-weight: 700;
 }
 
+.delivered-img {
+    transition: all 0.4s;
+}
+
 /* ************************ */
 /* FEATURED IN SECTION */
 /* ************************ */

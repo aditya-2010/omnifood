@@ -3,14 +3,32 @@
 const sectionHero = document.querySelector(".section-hero");
 const sectionHow = document.querySelector(".section-how");
 const sectionTestimonials = document.querySelector(".section-testimonials");
+const sectionPricing = document.querySelector(".section-pricing");
 
 const btnLearnMore = document.querySelector(".btn--outline");
 const btnMobileNav = document.querySelector(".btn--mobile-nav");
+const btnCta = document.querySelector(".btn--cta-top");
 
 const header = document.querySelector(".header");
 const logos = document.querySelectorAll(".logo");
 const navList = document.querySelector(".main-nav-list");
 const containers = document.querySelectorAll(".container");
+
+btnCta.addEventListener("click", () => {
+  sectionPricing.scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector(".delivered-imgs").addEventListener("mouseover", (e) => {
+  if (e.target.classList.contains("delivered-img")) {
+    e.target.style.transform = "scale(1.2)";
+  }
+});
+
+document.querySelector(".delivered-imgs").addEventListener("mouseout", (e) => {
+  if (e.target.classList.contains("delivered-img")) {
+    e.target.style.transform = "scale(1)";
+  }
+});
 
 // *************************
 // Reveal sections on scroll
