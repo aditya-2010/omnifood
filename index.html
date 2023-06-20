@@ -400,18 +400,18 @@
                         <h2 class="heading-secondary">Get your first meal for free!</h2>
                         <p class="cta-text">Healthy, tasty and hassle-free meals are waiting for you. Start eating well
                             today. You can cancel or pause anytime. And the first meal is on us!</p>
-                        <form action="#" class="cta-form">
+                        <form netlify name="sign-up" class="cta-form">
                             <div>
                                 <label for="name">Full Name</label>
-                                <input id="name" type="text" placeholder="Elon Musk" required>
+                                <input id="name" name="full-name" type="text" placeholder="Elon Musk" required>
                             </div>
                             <div>
                                 <label for="email">Email address</label>
-                                <input id="email" type="email" placeholder="user@email.com" required>
+                                <input id="email" name="email" type="email" placeholder="user@email.com" required>
                             </div>
                             <div>
                                 <label for="select-where">Where did you hear about us?</label>
-                                <select name="" id="select-where" required>
+                                <select name="select-where" id="select-where" required>
                                     <option value="">-- Please choose an option --</option>
                                     <option value="friends">Friends and Family</option>
                                     <option value="youtube">YouTube video</option>
