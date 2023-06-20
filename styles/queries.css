@@ -178,6 +178,10 @@ Below 944px (Tablets)
     .testimonials {
         grid-template-columns: 1fr 1fr;
     }
+
+    .pricing-plan-complete::after {
+        right: -18%;
+    }
 }
 
 /* ************************
