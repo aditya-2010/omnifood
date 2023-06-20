@@ -2,20 +2,20 @@
 
 const sectionHero = document.querySelector(".section-hero");
 const sectionHow = document.querySelector(".section-how");
-const sectionFeatured = document.querySelector(".section-featured");
 const sectionTestimonials = document.querySelector(".section-testimonials");
 
-const btnSignUp = document.querySelector(".btn--cta");
 const btnLearnMore = document.querySelector(".btn--outline");
+const btnMobileNav = document.querySelector(".btn--mobile-nav");
 
-const nav = document.querySelector(".main-nav-list");
+const header = document.querySelector(".header");
+const logos = document.querySelectorAll(".logo");
+const navList = document.querySelector(".main-nav-list");
 const containers = document.querySelectorAll(".container");
 
 // *************************
 // Reveal sections on scroll
 const reveal = (entries, observer) => {
   const entry = entries[0];
-  //   console.log(entry);
   if (!entry.isIntersecting) return;
   entry.target.classList.remove("section--hidden");
   observer.unobserve(entry.target);
@@ -34,15 +34,45 @@ containers.forEach((container) => {
 });
 // *************************
 
+// *************************
+// Sticky nav
+const headerHeight = header.getBoundingClientRect().height;
+const observer = new IntersectionObserver(
+  (entries) => {
+    const entry = entries[0];
+    if (entry.isIntersecting === false) document.body.classList.add("sticky");
+    else document.body.classList.remove("sticky");
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${headerHeight}px`,
+  }
+);
+observer.observe(sectionHero);
+// *************************
+
+// Toggle responsive navbar
+btnMobileNav.addEventListener("click", () => {
+  header.classList.toggle("nav-open");
+});
+
+logos.forEach((logo) => {
+  logo.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
 btnLearnMore.addEventListener("click", (e) => {
   e.preventDefault();
   sectionHow.scrollIntoView({ behavior: "smooth" });
 });
 
-nav.addEventListener("click", (e) => {
+navList.addEventListener("click", (e) => {
   e.preventDefault();
   if (e.target.classList.contains("main-nav-link")) {
     const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    header.classList.toggle("nav-open");
   }
 });

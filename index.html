@@ -4,22 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Omnifood is an AI-powered food subscription that will makw you eat healthy again, 365 days a year. It's tailored to your personal tastes and nutritional needs.">
+    <link rel="icon" href="content/img/favicon-192.png">
+    <link rel="apple-touch-icon" href="content/img/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/queries.css">
     <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script defer src="script.js"></script>
-    <title>OmniFood</title>
+    <title>OmniFood &mdash; Never cook again</title>
 </head>
 
 <body>
     <header class="header">
-        <a href="#">
-            <img class="logo" src="content/img/omnifood-logo.png" alt="Omnifood Logo">
-        </a>
+        <img class="logo" src="content/img/omnifood-logo.png" alt="Omnifood Logo">
         <nav class="main-nav">
             <ul class="main-nav-list">
                 <li><a class="main-nav-link" href="#section-how">How it Works</a></li>
@@ -29,6 +33,10 @@
                 <li><a class="main-nav-link nav-cta" href="#">Sign In &rarr;</a></li>
             </ul>
         </nav>
+        <button class="btn--mobile-nav">
+            <ion-icon class="icon--mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon--mobile-nav" name="close-outline"></ion-icon>
+        </button>
     </header>
 
     <main>
@@ -56,7 +64,13 @@
                     </div>
                 </div>
                 <div class="hero-img-box">
-                    <img class="hero-img" src="content/img/hero.png" alt="Woman eating food and food bowls on table">
+                    <picture>
+                        <source srcset="content/img/hero.webp" type="image/webp" />
+                        <source srcset="content/img/hero-min.png" type="image/png" />
+
+                        <img src="content/img/hero-min.png" class="hero-img"
+                            alt="Woman enjoying food, meals in storage container, and food bowls on a table" />
+                    </picture>
                 </div>
             </div>
         </section>
@@ -123,11 +137,12 @@
         </section>
 
         <section class="section-meals" id="section-meals">
-            <div class="container center-text"><span class="subheading">Meals</span>
+            <div class="container center-text">
+                <span class="subheading">Meals</span>
                 <h2 class="heading-secondary">Omnifood AI chooses from 5,000+ recipes</h2>
             </div>
 
-            <div class="container grid grid--3-cols margin-bottom-md">
+            <div class="container meal-cards grid grid--3-cols margin-bottom-md">
                 <div class="meal">
                     <div class="meal-img-box">
                         <img class="meal-img" src="content/img/meals/meal-1.jpg" alt="Japanese Gyozas">
@@ -294,7 +309,7 @@
                 <h2 class="heading-secondary">Eating well without breaking the bank</h2>
             </div>
 
-            <div class="container grid grid--2-cols margin-bottom-md">
+            <div class="pricing-plans container grid grid--2-cols margin-bottom-md">
                 <div class="pricing-plan pricing-plan--starter">
                     <header class="plan-header">
                         <p class="plan-name">Starter</p>
@@ -352,7 +367,7 @@
                     include: </aside>
             </div>
 
-            <div class="container grid grid--4-cols">
+            <div class="features container grid grid--4-cols">
                 <div class="feature">
                     <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
                     <p class="feature-title">Never cook again!</p>
@@ -418,16 +433,14 @@
     <footer class="footer">
         <div class="container grid grid--footer">
             <div class="logo-col">
-                <a href="#" class="footer-logo">
-                    <img class="logo" src="content/img/omnifood-logo.png" alt="Omnifood Logo">
-                </a>
+                <img class="logo footer-logo" src="content/img/omnifood-logo.png" alt="Omnifood Logo">
                 <ul class="social-links">
                     <li><a href=""><ion-icon class="social-icon" name="logo-facebook"></ion-icon></a></li>
                     <li><a href=""><ion-icon class="social-icon" name="logo-instagram"></ion-icon></a></li>
                     <li><a href=""><ion-icon class="social-icon" name="logo-twitter"></ion-icon></a></li>
                 </ul>
 
-                <p class="copyright">Copyright &copy; 2023 by Omnifood Inc. All rights reserved</p>
+                <p class="copyright">Copyright &copy; 2023 by Omnifood Inc. <br>All rights reserved</p>
             </div>
             <div class="address-col">
                 <p class="footer-heading">Contact us</p>

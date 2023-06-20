@@ -26,7 +26,7 @@ git clone https://github.com/aditya-2010/omnifood.git
 
 ## Features
 
-1. **Sleek and Modern Design**: The landing page features a visually appealing and user-friendly design to engage visitors.
+1. **Sleek and Modern Design**: The landing page features a visually appealing and user-friendly design like smooth scrolling and revealing sections on scroll.
 
 2. **Responsive Layout**: The website is responsive and optimized for various devices, including desktops, tablets, and mobile phones.
 
